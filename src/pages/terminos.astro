@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LegalDocument from '../components/LegalDocument.astro';
+import legal from '../data/legal.es.json';
+
+const doc = legal.documents.terms;
+---
+
+<Layout title="Términos y condiciones · Sano" description="Términos y condiciones de uso de la app Sano.">
+  <LegalDocument doc={doc as any} />
+</Layout>

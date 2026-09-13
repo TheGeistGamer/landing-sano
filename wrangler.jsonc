@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers con static assets: sirve el build de Astro (`dist/`).
+  // Deploy: `npm run deploy` (requiere `npx wrangler login` la primera vez).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sano-landing",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

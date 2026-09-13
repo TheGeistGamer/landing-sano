@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+/* ─── Tokens (DESIGN.md de la app) ─────────────────────────────────────────── */
+:root {
+  --bg: #FCFDFE; --bg2: #F7FAFC; --card: #FFFFFF; --line: #DDE7EE; --line2: #EEF3F7;
+  --ink: #132331; --ink2: #304251; --mute: #667785; --faint: #98A6B3;
+  --brand: #1796D8; --brand-d: #0E7DB8; --brand-x: #0B5F8F;
+  --brand-50: #EAF7FF; --brand-100: #D3EEFF; --brand-200: #A9DCFA;
+  --fresh: #25B77A; --fresh-50: #ECFDF6; --fresh-700: #087A53;
+  --warm-100: #FFE8C7; --warm-600: #E9762D;
+  --sc-ex: #18A86B; --sc-good: #67C84F; --sc-mod: #F4B740; --sc-low: #F9735B; --sc-crit: #D92D20;
+  --navy: #071A2F;
+  --blob1: #A9DCFA; --blob2: #D1FAE7; --blob3: #FFE8C7;
+  --phone: #111820; --screen: #FCFDFE;
+  --shadow: 0 1px 2px rgba(19,35,49,.04), 0 8px 24px rgba(19,35,49,.06), 0 24px 64px rgba(19,35,49,.08);
+  --shadow-sm: 0 1px 2px rgba(19,35,49,.05), 0 6px 16px rgba(19,35,49,.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #071A2F; --bg2: #0A2340; --card: #0D2A4A; --line: #1B3A5C; --line2: #143253;
+    --ink: #F2F7FB; --ink2: #D3E1EC; --mute: #9BB0C2; --faint: #6F8598;
+    --brand-50: #0F3556; --brand-100: #144568; --brand-200: #1D5C88; --brand-x: #7CCBF5;
+    --fresh-50: #0F3A2C; --fresh-700: #7EE0B5; --warm-100: #4A3720;
+    --blob1: #0E4A78; --blob2: #0F4A38; --blob3: #4A3720;
+    --phone: #1C2733; --screen: #0D2A4A;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.3), 0 6px 16px rgba(0,0,0,.3);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #071A2F; --bg2: #0A2340; --card: #0D2A4A; --line: #1B3A5C; --line2: #143253;
+  --ink: #F2F7FB; --ink2: #D3E1EC; --mute: #9BB0C2; --faint: #6F8598;
+  --brand-50: #0F3556; --brand-100: #144568; --brand-200: #1D5C88; --brand-x: #7CCBF5;
+  --fresh-50: #0F3A2C; --fresh-700: #7EE0B5; --warm-100: #4A3720;
+  --blob1: #0E4A78; --blob2: #0F4A38; --blob3: #4A3720;
+  --phone: #1C2733; --screen: #0D2A4A;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.3), 0 6px 16px rgba(0,0,0,.3);
+}
+
+/* Utilidades de Tailwind que leen los tokens: bg-card, text-mute, border-line2… */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg2);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-line2: var(--line2);
+  --color-ink: var(--ink);
+  --color-ink2: var(--ink2);
+  --color-mute: var(--mute);
+  --color-faint: var(--faint);
+  --color-brand: var(--brand);
+  --color-brand-d: var(--brand-d);
+  --color-brand-x: var(--brand-x);
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-fresh: var(--fresh);
+  --color-fresh-50: var(--fresh-50);
+  --color-fresh-700: var(--fresh-700);
+  --color-warm-100: var(--warm-100);
+  --color-warm-600: var(--warm-600);
+  --color-navy: var(--navy);
+  --color-sc-ex: var(--sc-ex);
+  --color-sc-good: var(--sc-good);
+  --color-sc-mod: var(--sc-mod);
+  --color-sc-low: var(--sc-low);
+  --color-sc-crit: var(--sc-crit);
+  --shadow-soft: var(--shadow);
+  --shadow-soft-sm: var(--shadow-sm);
+}
+
+@theme {
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ─── Base ────────────────────────────────────────────────────────────────── */
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { background: var(--bg); color: var(--ink); }
+  h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; letter-spacing: -0.02em; line-height: 1.1; }
+}
+
+/* ─── Componentes ─────────────────────────────────────────────────────────── */
+@layer components {
+  .eyebrow {
+    font-family: var(--font-display); font-size: 12px; font-weight: 600;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--brand);
+  }
+  .lede { color: var(--mute); font-size: 17px; max-width: 52ch; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+    font-family: var(--font-display); font-weight: 600; font-size: 14px;
+    padding: 13px 22px; border-radius: 999px; border: 1px solid transparent;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible { outline: 3px solid var(--brand-200); outline-offset: 2px; }
+  .btn-p { background: var(--brand-d); color: #fff; box-shadow: 0 8px 20px rgba(14,125,184,.28); }
+  .btn-s { background: var(--card); color: var(--ink); border-color: var(--line); box-shadow: var(--shadow-sm); }
+
+  .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .75; pointer-events: none; z-index: 0; }
+
+  /* Pantallas / mockups */
+  .shot { background: var(--card); border: 1px solid var(--line2); border-radius: 22px; box-shadow: var(--shadow); overflow: hidden; }
+  .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 12px; padding: 9px 0; border-top: 1px solid var(--line2); }
+  .row:first-of-type { border-top: 0; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 7px; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 99px; background: var(--fresh-50); color: var(--fresh-700); }
+
+  .ring {
+    width: 132px; height: 132px; margin: 0 auto; border-radius: 50%; position: relative;
+    display: grid; place-items: center; align-content: center;
+    background: conic-gradient(var(--sc-ex) 0 var(--score, 82%), var(--line2) var(--score, 82%) 100%);
+  }
+  .ring::after { content: ""; position: absolute; inset: 11px; border-radius: 50%; background: var(--card); }
+  .ring > * { position: relative; z-index: 1; }
+
+  /* Sello octagonal NOM-051 (siempre negro, en ambos temas) */
+  .seal {
+    width: 44px; height: 44px; background: #111; color: #fff; padding: 6px;
+    clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+    font-size: 6.5px; font-weight: 700; line-height: 1.05; text-align: center; text-transform: uppercase;
+    display: grid; place-items: center;
+  }
+
+  .phone { background: var(--phone); border-radius: 38px; padding: 10px; box-shadow: 0 30px 70px rgba(7,26,47,.3); position: relative; }
+  .phone-screen { background: var(--screen); border-radius: 30px; height: 100%; overflow: hidden; }
+
+  .bigphone {
+    position: absolute; left: 50%; top: -110px; width: 560px; height: 270px;
+    transform: translateX(-50%) perspective(1400px) rotateX(48deg) rotateZ(-9deg);
+    background: var(--phone); border-radius: 36px; padding: 12px; box-shadow: 0 40px 80px rgba(7,26,47,.35);
+  }
+  @media (max-width: 900px) { .bigphone { width: 88%; top: -70px; } }
+
+  .chip { background: var(--card); border: 1px solid var(--line2); border-radius: 14px; padding: 10px 12px; font-size: 11px; color: var(--mute); box-shadow: var(--shadow-sm); }
+  .chip b { display: block; font-family: var(--font-display); font-size: 22px; color: var(--ink); letter-spacing: -.03em; }
+  .chip-blue { background: var(--brand-d); color: #DDF1FF; border: 0; }
+  .chip-blue b { color: #fff; }
+
+  .float { animation: float 6s ease-in-out infinite; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float { animation: none; }
+  html { scroll-behavior: auto; }
+}

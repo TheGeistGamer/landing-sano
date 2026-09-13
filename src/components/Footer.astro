@@ -1,0 +1,18 @@
+---
+import { SUPPORT_EMAIL } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="pt-8 pb-12 text-[13px] text-mute">
+  <div class="mx-auto flex max-w-[1140px] flex-wrap items-center justify-between gap-5 px-6">
+    <p class="max-w-[70ch]">
+      © {year} Sano · Hecho en México. El score es orientativo y no sustituye la etiqueta ni a un profesional de la salud.
+    </p>
+    <div class="flex gap-5">
+      <a href="/terminos" class="hover:text-brand">Términos</a>
+      <a href="/privacidad" class="hover:text-brand">Privacidad</a>
+      <a href={`mailto:${SUPPORT_EMAIL}`} class="hover:text-brand">Contacto</a>
+    </div>
+  </div>
+</footer>

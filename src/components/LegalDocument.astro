@@ -1,0 +1,53 @@
+---
+// Renderiza un documento legal con el mismo esquema que usa la app
+// (src/i18n/locales/es/legal.json en el repo de la app).
+type Block =
+  | { type: 'paragraph' | 'subtitle' | 'footer'; text: string }
+  | { type: 'list'; ordered?: boolean; items: string[] };
+
+interface Props {
+  doc: {
+    title: string;
+    updatedAt: string;
+    intro: string;
+    articles: { title: string; blocks: Block[] }[];
+  };
+}
+
+const { doc } = Astro.props;
+const updated = new Date(`${doc.updatedAt}T12:00:00`).toLocaleDateString('es-MX', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<article class="mx-auto max-w-[720px] px-6 pt-14 pb-20">
+  <a href="/" class="text-sm font-medium text-brand hover:underline">← Volver al inicio</a>
+  <p class="eyebrow mt-8">Legal</p>
+  <h1 class="mt-3 text-[clamp(32px,4.4vw,44px)] font-extrabold">{doc.title}</h1>
+  <p class="mt-2 text-sm text-mute">Última actualización: {updated}</p>
+  <p class="mt-6 text-[17px] text-ink2">{doc.intro}</p>
+
+  <div class="mt-10 flex flex-col gap-9">
+    {doc.articles.map((a) => (
+      <section class="flex flex-col gap-3">
+        <h2 class="text-xl font-bold">{a.title}</h2>
+        {a.blocks.map((b) => {
+          if (b.type === 'subtitle') return <h3 class="mt-2 text-base font-semibold text-ink2">{b.text}</h3>;
+          if (b.type === 'footer')
+            return <p class="mt-4 rounded-2xl border border-line2 bg-bg2 p-4 text-sm text-mute">{b.text}</p>;
+          if (b.type === 'list') {
+            const Tag = b.ordered ? 'ol' : 'ul';
+            return (
+              <Tag class:list={['flex flex-col gap-2 pl-5 text-mute', b.ordered ? 'list-decimal' : 'list-disc']}>
+                {b.items.map((it) => <li>{it}</li>)}
+              </Tag>
+            );
+          }
+          return <p class="text-mute">{b.text}</p>;
+        })}
+      </section>
+    ))}
+  </div>
+</article>

@@ -1,0 +1,25 @@
+---
+import Icon from './Icon.astro';
+import MobileMenu from './MobileMenu';
+import { NAV_LINKS } from '../data/site';
+---
+
+<nav class="sticky top-0 z-30 border-b border-line2 bg-bg/80 backdrop-blur-md">
+  <div class="mx-auto flex h-17 max-w-[1140px] items-center justify-between px-6">
+    <a href="/" class="flex items-center gap-2.5 font-display text-xl font-extrabold tracking-tight">
+      <span class="grid size-8 place-items-center rounded-[10px] bg-brand-d text-white shadow-[0_6px_14px_rgba(14,125,184,.3)]">
+        <Icon name="scan" size={18} strokeWidth={2.4} />
+      </span>
+      Sano
+    </a>
+
+    <div class="hidden gap-7 text-sm font-medium text-ink2 md:flex">
+      {NAV_LINKS.slice(0, 3).map((l) => <a href={l.href} class="transition-colors hover:text-brand">{l.label}</a>)}
+    </div>
+
+    <div class="flex items-center gap-2">
+      <a href="/#descarga" class="btn btn-p hidden sm:inline-flex">Descargar gratis</a>
+      <MobileMenu client:media="(max-width: 767px)" links={NAV_LINKS} />
+    </div>
+  </div>
+</nav>

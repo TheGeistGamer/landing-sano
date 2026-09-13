@@ -1,0 +1,261 @@
+{
+  "hub": {
+    "title": "Legal",
+    "subtitle": "Consulta nuestros documentos legales y de privacidad.",
+    "updated_prefix": "Última actualización:"
+  },
+  "document": {
+    "empty_title": "Contenido en preparación",
+    "empty_description": "Este documento estará disponible pronto."
+  },
+  "documents": {
+    "terms": {
+      "title": "Términos y condiciones",
+      "updatedAt": "2026-09-13",
+      "intro": "Bienvenido a Sano. Estos Términos y Condiciones regulan el uso de la aplicación móvil Sano. Al crear una cuenta o utilizar la app, aceptas estos términos en su totalidad. Si no estás de acuerdo, te pedimos no utilizar el servicio.",
+      "articles": [
+        {
+          "title": "1. Descripción del servicio",
+          "blocks": [
+            { "type": "paragraph", "text": "Sano es una herramienta de información al consumidor que permite escanear el código de barras de productos alimenticios y de cuidado personal para mostrar una calificación de salud, el desglose de sellos de advertencia NOM-051, un análisis de aditivos y alternativas disponibles en México." },
+            { "type": "paragraph", "text": "Sano es un asistente de compra informativo. No sustituye el etiquetado oficial del producto, la consulta de un profesional de la salud ni el criterio del propio usuario." }
+          ]
+        },
+        {
+          "title": "2. Carácter informativo — no es consejo médico",
+          "blocks": [
+            { "type": "paragraph", "text": "La calificación de salud (score) y las recomendaciones que ofrece Sano son orientativas y se generan de forma automática a partir de modelos como el Nutri-Score adaptado y la normativa NOM-051." },
+            { "type": "list", "ordered": false, "items": [
+              "El score no constituye un diagnóstico, tratamiento ni asesoría médica o nutricional.",
+              "No debe usarse para tomar decisiones de salud sin la orientación de un profesional calificado.",
+              "Ante cualquier condición de salud, alergia o intolerancia, consulta siempre a tu médico y verifica la etiqueta oficial del producto."
+            ]}
+          ]
+        },
+        {
+          "title": "3. Cuenta de usuario",
+          "blocks": [
+            { "type": "paragraph", "text": "Algunas funciones requieren crear una cuenta. Eres responsable de la veracidad de los datos que proporcionas y de mantener la confidencialidad de tus credenciales." },
+            { "type": "list", "ordered": false, "items": [
+              "Debes proporcionar información veraz y mantenerla actualizada.",
+              "Eres responsable de toda actividad realizada desde tu cuenta.",
+              "Debes notificarnos cualquier uso no autorizado de tu cuenta."
+            ]}
+          ]
+        },
+        {
+          "title": "4. Precio y funciones",
+          "blocks": [
+            { "type": "paragraph", "text": "En su versión actual, Sano es gratuita. No ofrece compras dentro de la app, suscripciones ni ningún otro cobro, y no te solicitaremos datos de pago." },
+            { "type": "paragraph", "text": "Con una cuenta puedes usar todas las funciones disponibles, incluidas el historial de escaneos, el comparador de productos, el modo familia y el reporte semanal, sin costo." },
+            { "type": "subtitle", "text": "4.1 Planes de pago en el futuro" },
+            { "type": "paragraph", "text": "En versiones futuras podríamos ofrecer planes de pago opcionales con funciones adicionales. Si eso ocurre:" },
+            { "type": "list", "ordered": false, "items": [
+              "Actualizaremos estos términos y te lo avisaremos dentro de la app antes de que entre en vigor.",
+              "Nunca se te cobrará nada sin que realices una compra de forma expresa a través de la App Store de Apple o Google Play.",
+              "Las condiciones de precio, renovación y cancelación se mostrarán antes de cualquier compra."
+            ]}
+          ]
+        },
+        {
+          "title": "5. Reportes y comentarios de usuarios",
+          "blocks": [
+            { "type": "paragraph", "text": "Sano te permite reportar información incorrecta o inapropiada de un producto y enviarnos problemas o sugerencias sobre la app. El equipo de Sano revisa estos reportes para corregir y mejorar el servicio." },
+            { "type": "list", "ordered": false, "items": [
+              "Te comprometes a que la información que envíes sea veraz y no infrinja derechos de terceros.",
+              "Concedes a Sano una licencia no exclusiva, mundial y libre de regalías para usar tus reportes y sugerencias con el fin de mejorar el servicio, sin que ello genere compensación alguna.",
+              "Sano puede descartar reportes duplicados, falsos o que incumplan estos términos."
+            ]}
+          ]
+        },
+        {
+          "title": "6. Uso aceptable",
+          "blocks": [
+            { "type": "paragraph", "text": "Al usar Sano te comprometes a no:" },
+            { "type": "list", "ordered": false, "items": [
+              "Utilizar el servicio con fines ilícitos o fraudulentos.",
+              "Subir contenido falso, ofensivo, spam o que infrinja derechos de autor.",
+              "Intentar acceder, copiar o extraer masivamente los datos de la plataforma sin autorización.",
+              "Interferir con el funcionamiento o la seguridad de la aplicación."
+            ]}
+          ]
+        },
+        {
+          "title": "7. Origen y exactitud de la información",
+          "blocks": [
+            { "type": "paragraph", "text": "La información de productos proviene de fuentes propias, de la base abierta OpenFoodFacts y de los reportes de la comunidad. Aunque trabajamos para mantener datos precisos y actualizados, no garantizamos que toda la información esté libre de errores o completa en todo momento." },
+            { "type": "paragraph", "text": "La etiqueta física del producto siempre prevalece sobre la información mostrada en la app." }
+          ]
+        },
+        {
+          "title": "8. Propiedad intelectual",
+          "blocks": [
+            { "type": "paragraph", "text": "La marca Sano, el diseño, el software y los contenidos originales de la aplicación son propiedad de sus titulares y están protegidos por la legislación aplicable. No se concede ningún derecho sobre ellos salvo el uso normal de la app conforme a estos términos." }
+          ]
+        },
+        {
+          "title": "9. Limitación de responsabilidad",
+          "blocks": [
+            { "type": "paragraph", "text": "Sano se proporciona \"tal cual\". En la medida permitida por la ley, no seremos responsables por decisiones de compra o de salud tomadas con base en la información de la app, ni por daños indirectos derivados del uso del servicio." }
+          ]
+        },
+        {
+          "title": "10. Cambios en los términos",
+          "blocks": [
+            { "type": "paragraph", "text": "Podemos actualizar estos términos para reflejar cambios en el servicio o en la normativa. Notificaremos los cambios relevantes dentro de la app. El uso continuado tras la actualización implica la aceptación de los nuevos términos." }
+          ]
+        },
+        {
+          "title": "11. Terminación",
+          "blocks": [
+            { "type": "paragraph", "text": "Puedes dejar de usar Sano y eliminar tu cuenta en cualquier momento desde la sección de Seguridad. Podemos suspender o cancelar cuentas que incumplan estos términos." }
+          ]
+        },
+        {
+          "title": "12. Ley aplicable",
+          "blocks": [
+            { "type": "paragraph", "text": "Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Cualquier controversia se someterá a los tribunales competentes de México." },
+            { "type": "footer", "text": "Documento base preliminar, sujeto a revisión legal antes de su publicación definitiva. Para dudas escríbenos a legal@sano.app." }
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Política de privacidad",
+      "updatedAt": "2026-09-13",
+      "intro": "En Sano valoramos tu privacidad. Esta política explica qué datos recopilamos, cómo los usamos y qué derechos tienes sobre ellos. Aplica a la aplicación móvil Sano y se rige por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (México).",
+      "articles": [
+        {
+          "title": "1. Responsable del tratamiento",
+          "blocks": [
+            { "type": "paragraph", "text": "El responsable del tratamiento de tus datos personales es el equipo de Sano. Puedes contactarnos para cualquier asunto de privacidad en privacidad@sano.app." }
+          ]
+        },
+        {
+          "title": "2. Datos que recopilamos",
+          "blocks": [
+            { "type": "subtitle", "text": "2.1 Datos de cuenta" },
+            { "type": "list", "ordered": false, "items": [
+              "Nombre o nombre para mostrar y correo electrónico.",
+              "Contraseña, que se guarda protegida con un algoritmo de hash y nunca en texto plano.",
+              "País e idioma."
+            ]},
+            { "type": "subtitle", "text": "2.2 Perfil de salud" },
+            { "type": "list", "ordered": false, "items": [
+              "Condiciones que decidas indicar (diabetes, hipertensión, intolerancias, perfil infantil).",
+              "Estos datos se usan únicamente para personalizar tu score y se consideran datos sensibles."
+            ]},
+            { "type": "subtitle", "text": "2.3 Uso de la app" },
+            { "type": "list", "ordered": false, "items": [
+              "Historial de productos escaneados y su score al momento del escaneo.",
+              "Preferencias de la app y configuración.",
+              "Datos técnicos del dispositivo y sesiones (modelo, sistema operativo, dirección IP aproximada) con fines de seguridad."
+            ]},
+            { "type": "subtitle", "text": "2.4 Reportes y comentarios" },
+            { "type": "list", "ordered": false, "items": [
+              "Los reportes de productos que envíes (motivo y nota opcional).",
+              "Los problemas o sugerencias que nos escribas, junto con la plataforma, la versión de la app y la versión del sistema operativo, para poder atenderlos.",
+              "Si envías un comentario sin haber iniciado sesión, no se liga a ninguna cuenta."
+            ]},
+            { "type": "subtitle", "text": "2.5 Datos que no recopilamos" },
+            { "type": "list", "ordered": false, "items": [
+              "No recopilamos datos de pago (tarjetas, cuentas bancarias ni historial de compras): la app no ofrece compras ni suscripciones.",
+              "No usamos tu ubicación precisa ni tus contactos.",
+              "La cámara se usa solo para leer códigos de barras; no guardamos esas imágenes."
+            ]}
+          ]
+        },
+        {
+          "title": "3. Datos sensibles de salud",
+          "blocks": [
+            { "type": "paragraph", "text": "La información de condiciones de salud que registres es opcional y se usa exclusivamente para calcular un score personalizado dentro de tu dispositivo y cuenta. No la usamos con fines publicitarios ni la compartimos con terceros con fines comerciales." }
+          ]
+        },
+        {
+          "title": "4. Cómo usamos tus datos",
+          "blocks": [
+            { "type": "list", "ordered": false, "items": [
+              "Proporcionar y personalizar el servicio (calcular tu score y mostrar alternativas).",
+              "Gestionar tu cuenta y tus sesiones.",
+              "Atender tus reportes de productos, problemas y sugerencias.",
+              "Mejorar la app, la base de datos de productos y la calidad de las imágenes.",
+              "Garantizar la seguridad y prevenir fraude o abuso.",
+              "Enviarte correos necesarios para el servicio, como la recuperación de contraseña. No enviamos publicidad."
+            ]}
+          ]
+        },
+        {
+          "title": "5. Con quién compartimos datos",
+          "blocks": [
+            { "type": "paragraph", "text": "No vendemos tus datos personales. Compartimos información únicamente con proveedores que nos ayudan a operar el servicio, bajo obligaciones de confidencialidad:" },
+            { "type": "list", "ordered": false, "items": [
+              "Servicios de almacenamiento e infraestructura (por ejemplo, Cloudflare R2) para alojar imágenes y datos.",
+              "Un proveedor de correo electrónico, para enviar los correos del servicio (por ejemplo, recuperación de contraseña).",
+              "OpenFoodFacts, como fuente de datos de productos (no recibe tus datos personales)."
+            ]}
+          ]
+        },
+        {
+          "title": "6. Datos agregados y anónimos",
+          "blocks": [
+            { "type": "paragraph", "text": "Podemos generar estadísticas agregadas y anonimizadas sobre patrones de consumo que no permiten identificarte. Esta información puede usarse para mejorar el producto o, a futuro, compartirse con terceros de forma anónima." }
+          ]
+        },
+        {
+          "title": "7. Conservación de los datos",
+          "blocks": [
+            { "type": "paragraph", "text": "Conservamos tus datos mientras tu cuenta esté activa o sea necesario para prestar el servicio. Si eliminas tu cuenta, borramos o anonimizamos tus datos personales salvo aquellos que debamos conservar por obligación legal." }
+          ]
+        },
+        {
+          "title": "8. Tus derechos (ARCO)",
+          "blocks": [
+            { "type": "paragraph", "text": "Tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos, así como a revocar tu consentimiento." },
+            { "type": "list", "ordered": false, "items": [
+              "Puedes editar tus datos personales desde tu perfil.",
+              "Puedes solicitar una copia de tus datos o ejercer cualquier otro derecho escribiendo a privacidad@sano.app.",
+              "Puedes eliminar tu cuenta y tus datos desde Seguridad y permisos → Eliminar cuenta."
+            ]}
+          ]
+        },
+        {
+          "title": "9. Seguridad",
+          "blocks": [
+            { "type": "paragraph", "text": "Aplicamos medidas técnicas y organizativas razonables para proteger tus datos, incluyendo autenticación con tokens y cifrado en el almacenamiento de credenciales. Ningún sistema es completamente infalible, por lo que también te recomendamos proteger tus credenciales." }
+          ]
+        },
+        {
+          "title": "10. Menores de edad",
+          "blocks": [
+            { "type": "paragraph", "text": "Sano está dirigida a personas adultas. El perfil infantil es una función para que un adulto responsable personalice el análisis de productos destinados a un menor; no implica la creación de una cuenta para el menor." }
+          ]
+        },
+        {
+          "title": "11. Cambios en esta política",
+          "blocks": [
+            { "type": "paragraph", "text": "Podemos actualizar esta política para reflejar cambios en el servicio o en la normativa, por ejemplo si en el futuro se incorporan planes de pago. Te notificaremos los cambios relevantes dentro de la app antes de que entren en vigor." },
+            { "type": "footer", "text": "Documento base preliminar, sujeto a revisión legal antes de su publicación definitiva. Para ejercer tus derechos o resolver dudas escríbenos a privacidad@sano.app." }
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Política de cookies",
+      "updatedAt": "",
+      "intro": "",
+      "articles": []
+    },
+    "licenses": {
+      "title": "Licencias de terceros",
+      "updatedAt": "",
+      "intro": "",
+      "articles": []
+    },
+    "acknowledgements": {
+      "title": "Agradecimientos",
+      "updatedAt": "",
+      "intro": "",
+      "articles": []
+    }
+  }
+}

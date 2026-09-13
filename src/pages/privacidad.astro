@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LegalDocument from '../components/LegalDocument.astro';
+import legal from '../data/legal.es.json';
+
+const doc = legal.documents.privacy;
+---
+
+<Layout title="Política de privacidad · Sano" description="Qué datos recopila Sano, cómo los usa y tus derechos.">
+  <LegalDocument doc={doc as any} />
+</Layout>

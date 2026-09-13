@@ -1,0 +1,84 @@
+---
+import Icon from './Icon.astro';
+
+const DASHBOARD = [
+  { value: '82', label: 'Mi score de la semana', blue: true },
+  { value: '14', label: 'Productos escaneados' },
+  { value: '3', label: 'Alternativas elegidas' },
+  { value: '−32%', label: 'Azúcar vs. semana pasada' },
+  { value: '2', label: 'Perfiles de familia' },
+  { value: '0', label: 'Aditivos de riesgo' },
+];
+
+const FEATURES = [
+  {
+    icon: 'scan',
+    tone: 'bg-brand-50 text-brand',
+    title: 'Score de 0 a 100',
+    text: 'Un solo número, con semáforo. Basado en Nutri-Score y ajustado a los sellos NOM-051 de México.',
+  },
+  {
+    icon: 'shield',
+    tone: 'bg-fresh-50 text-fresh',
+    title: 'Personalizado a tu salud',
+    text: 'Diabetes, hipertensión, gluten, lactosa o perfil infantil. El mismo producto puntúa distinto para cada persona.',
+  },
+  {
+    icon: 'additives',
+    tone: 'bg-warm-100 text-warm-600',
+    title: 'Aditivos explicados',
+    text: 'Cada aditivo con su semáforo, según EFSA y COFEPRIS, en lenguaje que se entiende parado en el pasillo.',
+  },
+  {
+    icon: 'swap',
+    tone: 'bg-brand-100 text-brand-x',
+    title: 'Alternativas que sí existen',
+    text: 'Opciones mejor calificadas de la misma categoría, disponibles en súpers de México.',
+  },
+] as const;
+---
+
+<section id="funciones" class="relative mt-30 pb-18">
+  <div class="blob -bottom-35 -left-50 size-120" style="background: var(--blob2)"></div>
+  <div class="blob top-50 -right-45 size-105" style="background: var(--blob1)"></div>
+
+  <div class="relative mx-auto max-w-[1140px] px-6">
+    <div class="relative rounded-[32px] border border-line2 bg-card/70 px-5.5 pt-30 pb-10 shadow-soft backdrop-blur-xl sm:px-10 sm:pt-38 md:pt-50 md:pb-14">
+      <!-- Teléfono en perspectiva -->
+      <div class="bigphone" aria-hidden="true">
+        <div class="phone-screen grid grid-cols-3 gap-3 rounded-[26px] px-5.5 py-4.5">
+          {DASHBOARD.map((d) => (
+            <div class:list={['chip', d.blue && 'chip-blue']}>
+              <b>{d.value}</b>
+              {d.label}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <p class="eyebrow text-center">Funciones</p>
+      <h2 class="mt-2.5 text-center text-[clamp(28px,3.6vw,40px)] font-bold">
+        Lo que hace <span class="text-brand">diferente</span> a Sano
+      </h2>
+      <p class="lede mx-auto mt-3 mb-11 text-center">
+        Los sellos negros te dicen que algo está mal. Sano te dice qué tan mal, para quién, y qué comprar en su lugar.
+      </p>
+
+      <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        {FEATURES.map((f) => (
+          <div>
+            <div class:list={['mb-3.5 grid size-13 place-items-center rounded-2xl', f.tone]}>
+              <Icon name={f.icon} />
+            </div>
+            <h3 class="mb-1.5 text-base font-bold">{f.title}</h3>
+            <p class="text-sm text-mute">{f.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-10 text-center">
+        <a class="btn btn-p" href="#descarga">Empezar a escanear</a>
+      </div>
+    </div>
+  </div>
+</section>

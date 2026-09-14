@@ -27,7 +27,18 @@ src/
 
 1. `npx wrangler login` (una sola vez).
 2. `npm run deploy`. Publica `dist/` como static assets en un Worker llamado `sano-landing` (ver `wrangler.jsonc`).
-3. En el dashboard de Cloudflare, agrega el dominio personalizado (por ejemplo `sano.app`) al Worker.
+3. Dominio personalizado: `sano.infinitydev.agency` (Workers & Pages → sano-landing → Dominios).
+
+## Dominio y correos
+
+| Uso | Valor |
+|---|---|
+| Sitio web | `https://sano.infinitydev.agency` (`site` en `astro.config.mjs`) |
+| Soporte (footer, `SUPPORT_EMAIL`) | `soporte@infinitydev.agency` |
+| Privacidad y solicitud de datos | `sano@infinitydev.agency` |
+| Contacto legal | `contacto@infinitydev.agency` |
+
+Son alias en Hostinger del buzón `contacto@infinitydev.agency`. Si cambian, actualizar también la app (ver `Sano/PUBLICAR.md`).
 
 ## Pendientes
 

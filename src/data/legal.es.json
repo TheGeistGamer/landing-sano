@@ -115,7 +115,7 @@
           "title": "12. Ley aplicable",
           "blocks": [
             { "type": "paragraph", "text": "Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Cualquier controversia se someterá a los tribunales competentes de México." },
-            { "type": "footer", "text": "Documento base preliminar, sujeto a revisión legal antes de su publicación definitiva. Para dudas escríbenos a legal@sano.app." }
+            { "type": "footer", "text": "Documento base preliminar, sujeto a revisión legal antes de su publicación definitiva. Para dudas escríbenos a contacto@infinitydev.agency." }
           ]
         }
       ]
@@ -128,7 +128,7 @@
         {
           "title": "1. Responsable del tratamiento",
           "blocks": [
-            { "type": "paragraph", "text": "El responsable del tratamiento de tus datos personales es el equipo de Sano. Puedes contactarnos para cualquier asunto de privacidad en privacidad@sano.app." }
+            { "type": "paragraph", "text": "El responsable del tratamiento de tus datos personales es el equipo de Sano. Puedes contactarnos para cualquier asunto de privacidad en sano@infinitydev.agency." }
           ]
         },
         {
@@ -213,7 +213,7 @@
             { "type": "paragraph", "text": "Tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos, así como a revocar tu consentimiento." },
             { "type": "list", "ordered": false, "items": [
               "Puedes editar tus datos personales desde tu perfil.",
-              "Puedes solicitar una copia de tus datos o ejercer cualquier otro derecho escribiendo a privacidad@sano.app.",
+              "Puedes solicitar una copia de tus datos o ejercer cualquier otro derecho escribiendo a sano@infinitydev.agency.",
               "Puedes eliminar tu cuenta y tus datos desde Seguridad y permisos → Eliminar cuenta."
             ]}
           ]
@@ -234,7 +234,7 @@
           "title": "11. Cambios en esta política",
           "blocks": [
             { "type": "paragraph", "text": "Podemos actualizar esta política para reflejar cambios en el servicio o en la normativa, por ejemplo si en el futuro se incorporan planes de pago. Te notificaremos los cambios relevantes dentro de la app antes de que entren en vigor." },
-            { "type": "footer", "text": "Documento base preliminar, sujeto a revisión legal antes de su publicación definitiva. Para ejercer tus derechos o resolver dudas escríbenos a privacidad@sano.app." }
+            { "type": "footer", "text": "Documento base preliminar, sujeto a revisión legal antes de su publicación definitiva. Para ejercer tus derechos o resolver dudas escríbenos a sano@infinitydev.agency." }
           ]
         }
       ]

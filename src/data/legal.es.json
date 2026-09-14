@@ -213,7 +213,7 @@
             { "type": "paragraph", "text": "Tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos, así como a revocar tu consentimiento." },
             { "type": "list", "ordered": false, "items": [
               "Puedes editar tus datos personales desde tu perfil.",
-              "Puedes solicitar una copia de tus datos o ejercer cualquier otro derecho escribiendo a sano@infinitydev.agency.",
+              "Puedes solicitar una copia de tus datos desde Seguridad y permisos → Solicitar mis datos (una vez cada 24 horas, hasta 3 veces cada 30 días), o ejercer cualquier otro derecho escribiendo a sano@infinitydev.agency.",
               "Puedes eliminar tu cuenta y tus datos desde Seguridad y permisos → Eliminar cuenta."
             ]}
           ]

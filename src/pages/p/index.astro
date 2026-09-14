@@ -76,10 +76,23 @@ import { STORE_URLS } from '../../data/site';
     // Esquema propio de la app (app.json → "scheme": "sano"); expo-router lo lleva a /p/[barcode].
     openApp.href = `sano://p/${barcode}`;
     openApp.addEventListener('click', () => {
-      // Si la app no está instalada el navegador no navega: mostramos cómo seguir.
+      hint?.classList.add('hidden');
+      // Si la app se abre, la página pierde el foco (blur) o se oculta; en navegadores
+      // dentro de otras apps (Discord, Instagram) a veces solo llega `blur`.
+      let appOpened = false;
+      const markOpened = () => { appOpened = true; };
+      window.addEventListener('blur', markOpened, { once: true });
+      window.addEventListener('pagehide', markOpened, { once: true });
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') markOpened();
+      }, { once: true });
+
+      // Si la app no está instalada no pasa nada: mostramos cómo seguir.
       window.setTimeout(() => {
-        if (document.visibilityState === 'visible') hint?.classList.remove('hidden');
-      }, 1500);
+        if (!appOpened && document.visibilityState === 'visible' && document.hasFocus()) {
+          hint?.classList.remove('hidden');
+        }
+      }, 2000);
     });
   } else if (openApp) {
     openApp.href = '/';

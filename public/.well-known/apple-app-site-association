@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["B2UPC2C94J.com.ack.sano"],
+        "components": [
+          { "/": "/p/*", "comment": "Productos compartidos desde la app" }
+        ]
+      }
+    ]
+  }
+}

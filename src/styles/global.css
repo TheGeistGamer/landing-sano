@@ -72,22 +72,23 @@
 }
 
 @theme {
-  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora Variable", "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans Variable", "DM Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* ─── Base ────────────────────────────────────────────────────────────────── */
 @layer base {
-  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-  body { background: var(--bg); color: var(--ink); }
-  h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; letter-spacing: -0.02em; line-height: 1.1; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+  body { background: var(--bg); color: var(--ink); overflow-x: clip; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  h1, h2, h3, h4 { font-family: var(--font-display); overflow-wrap: break-word; text-wrap: balance; letter-spacing: -0.02em; line-height: 1.1; }
 }
 
 /* ─── Componentes ─────────────────────────────────────────────────────────── */
 @layer components {
   .eyebrow {
     font-family: var(--font-display); font-size: 12px; font-weight: 600;
-    letter-spacing: .12em; text-transform: uppercase; color: var(--brand);
+    letter-spacing: .12em; text-transform: uppercase; color: var(--brand-x);
   }
   .lede { color: var(--mute); font-size: 17px; max-width: 52ch; }
 
@@ -103,6 +104,8 @@
   .btn-s { background: var(--card); color: var(--ink); border-color: var(--line); box-shadow: var(--shadow-sm); }
 
   .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .75; pointer-events: none; z-index: 0; }
+  /* En móvil el blur grande es caro de pintar: menos radio y blobs más chicos. */
+  @media (max-width: 639px) { .blob { filter: blur(56px); scale: .7; } }
 
   /* Pantallas / mockups */
   .shot { background: var(--card); border: 1px solid var(--line2); border-radius: 22px; box-shadow: var(--shadow); overflow: hidden; }
@@ -136,10 +139,16 @@
     background: var(--phone); border-radius: 36px; padding: 12px; box-shadow: 0 40px 80px rgba(7,26,47,.35);
   }
   @media (max-width: 900px) { .bigphone { width: 88%; top: -70px; } }
+  @media (max-width: 639px) {
+    .bigphone { width: 92%; height: 190px; top: -50px; padding: 8px; border-radius: 26px; transform: translateX(-50%) perspective(1000px) rotateX(40deg) rotateZ(-7deg); }
+    .bigphone .phone-screen { gap: 6px; padding: 10px; border-radius: 20px; }
+    .bigphone .chip { padding: 6px 7px; font-size: 8.5px; line-height: 1.2; border-radius: 10px; }
+    .bigphone .chip b { font-size: 15px; }
+  }
 
   .chip { background: var(--card); border: 1px solid var(--line2); border-radius: 14px; padding: 10px 12px; font-size: 11px; color: var(--mute); box-shadow: var(--shadow-sm); }
   .chip b { display: block; font-family: var(--font-display); font-size: 22px; color: var(--ink); letter-spacing: -.03em; }
-  .chip-blue { background: var(--brand-d); color: #DDF1FF; border: 0; }
+  .chip-blue { background: var(--brand-d); color: #fff; border: 0; }
   .chip-blue b { color: #fff; }
 
   .float { animation: float 6s ease-in-out infinite; }

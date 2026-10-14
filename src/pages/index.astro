@@ -5,9 +5,23 @@ import Features from '../components/Features.astro';
 import WhySano from '../components/WhySano.astro';
 import Profile from '../components/Profile.astro';
 import DownloadCta from '../components/DownloadCta.astro';
+
+// Datos estructurados: Google entiende que la página describe una app gratuita.
+const APP_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'MobileApplication',
+  name: 'Sano',
+  operatingSystem: 'iOS, Android',
+  applicationCategory: 'HealthApplication',
+  inLanguage: 'es-MX',
+  url: Astro.site?.href,
+  description:
+    'Escáner de alimentos para México: score de 0 a 100, sellos NOM-051, aditivos explicados y alternativas más sanas.',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'MXN' },
+};
 ---
 
-<Layout>
+<Layout jsonLd={APP_LD}>
   <Hero />
   <Features />
   <WhySano />

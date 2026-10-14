@@ -4,6 +4,8 @@ export const STORE_URLS = {
   android: '#descarga', // TODO: URL de Google Play
 };
 
+export const SITE_NAME = 'Sano';
+
 // Alias de Hostinger (buzón principal contacto@infinitydev.agency).
 export const SUPPORT_EMAIL = 'soporte@infinitydev.agency';
 

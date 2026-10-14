@@ -1,0 +1,63 @@
+---
+// Menú desplegable para móvil. Sin framework: un botón + un script mínimo.
+interface Props {
+  links: { href: string; label: string }[];
+}
+
+const { links } = Astro.props;
+---
+
+<div class="md:hidden" data-mobile-menu>
+  <button
+    type="button"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    class="grid size-11 place-items-center rounded-full border border-line bg-card text-ink shadow-soft-sm focus-visible:outline-3 focus-visible:outline-brand-100"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+      <path class="menu-open" d="M4 7h16M4 12h16M4 17h16"></path>
+      <path class="menu-close hidden" d="M6 6l12 12M18 6 6 18"></path>
+    </svg>
+  </button>
+
+  <div id="mobile-menu" hidden class="absolute inset-x-0 top-17 max-h-[calc(100dvh-68px)] overflow-y-auto border-b border-line2 bg-bg px-6 pt-2 pb-6 shadow-soft">
+    <ul class="flex flex-col">
+      {links.map((l) => (
+        <li>
+          <a href={l.href} class="block border-b border-line2 py-3.5 font-display text-base font-semibold text-ink">{l.label}</a>
+        </li>
+      ))}
+    </ul>
+    <a href="/#descarga" class="btn btn-p mt-5 w-full justify-center">Descargar gratis</a>
+  </div>
+</div>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-mobile-menu]');
+  const button = root?.querySelector('button');
+  const panel = root?.querySelector<HTMLElement>('#mobile-menu');
+
+  if (root && button && panel) {
+    const setOpen = (open: boolean) => {
+      panel.hidden = !open;
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      button.querySelector('.menu-open')?.classList.toggle('hidden', open);
+      button.querySelector('.menu-close')?.classList.toggle('hidden', !open);
+    };
+    button.addEventListener('click', () => setOpen(panel.hidden));
+    panel.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !panel.hidden) {
+        setOpen(false);
+        button.focus();
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (!panel.hidden && !root.contains(e.target as Node)) setOpen(false);
+    });
+  }
+</script>

@@ -4,7 +4,7 @@ import Icon from './Icon.astro';
 const GUARANTEES = ['100% gratis', 'Sin tarjeta ni anuncios', 'Productos de México'];
 ---
 
-<section class="relative pt-14 pb-10 md:pt-22">
+<section class="relative pt-10 pb-10 sm:pt-14 md:pt-22">
   <div class="blob -top-30 -left-55 size-130" style="background: var(--blob1)"></div>
   <div class="blob top-10 -right-40 size-105" style="background: var(--blob2)"></div>
   <div class="blob -top-25 right-55 size-65 opacity-60!" style="background: var(--blob3)"></div>
@@ -36,10 +36,10 @@ const GUARANTEES = ['100% gratis', 'Sin tarjeta ni anuncios', 'Productos de Méx
     </div>
 
     <!-- Cluster de pantallas -->
-    <div class="relative h-[520px] sm:h-[560px]" aria-hidden="true">
+    <div class="relative mx-auto h-[540px] w-full max-w-[460px] sm:h-[560px] lg:max-w-none" aria-hidden="true">
       <!-- Sellos NOM-051 -->
       <div class="shot float absolute top-0 left-0 hidden w-50 p-4 sm:block">
-        <h4 class="mb-2.5 text-xs font-semibold text-ink2">Sellos NOM-051</h4>
+        <p class="mb-2.5 text-xs font-semibold text-ink2">Sellos NOM-051</p>
         <div class="flex flex-wrap gap-1.5">
           <div class="seal">Exceso azúcares</div>
           <div class="seal">Exceso calorías</div>
@@ -64,8 +64,8 @@ const GUARANTEES = ['100% gratis', 'Sin tarjeta ni anuncios', 'Productos de Méx
       </div>
 
       <!-- Aditivos -->
-      <div class="shot float absolute top-24 -right-2.5 w-52.5 p-4 [animation-delay:-2s] sm:right-0">
-        <h4 class="mb-2.5 text-xs font-semibold text-ink2">Aditivos</h4>
+      <div class="shot float absolute bottom-0 -right-1 w-52.5 p-4 [animation-delay:-2s] sm:top-24 sm:right-0 sm:bottom-auto">
+        <p class="mb-2.5 text-xs font-semibold text-ink2">Aditivos</p>
         <div class="row py-1.5!"><span><i class="dot bg-sc-ex"></i>Pectina E440</span><span class="text-fresh-700">Seguro</span></div>
         <div class="row py-1.5!"><span><i class="dot bg-sc-mod"></i>Sorbato K E202</span><span class="text-[#B45309]">Moderar</span></div>
         <div class="row py-1.5!"><span><i class="dot bg-sc-crit"></i>Tartrazina E102</span><span class="text-[#B42318]">Evitar</span></div>
@@ -73,7 +73,7 @@ const GUARANTEES = ['100% gratis', 'Sin tarjeta ni anuncios', 'Productos de Méx
 
       <!-- Alternativas -->
       <div class="shot float absolute bottom-5 left-3 hidden w-47.5 p-4 [animation-delay:-4s] sm:block">
-        <h4 class="mb-2.5 text-xs font-semibold text-ink2">Alternativas cerca</h4>
+        <p class="mb-2.5 text-xs font-semibold text-ink2">Alternativas cerca</p>
         <div class="flex items-center gap-2.5 py-2 text-xs">
           <span class="size-7.5 flex-none rounded-lg bg-brand-50"></span>Yogur natural sin azúcar
           <b class="ml-auto font-display text-sc-ex">91</b>

@@ -45,3 +45,8 @@ Son alias en Hostinger del buzón `contacto@infinitydev.agency`. Si cambian, act
 - URLs reales de App Store y Google Play en `src/data/site.ts`.
 - Reemplazar los mockups en HTML por capturas reales si se desea.
 - Mantener `src/data/legal.es.json` sincronizado con `Sano/src/i18n/locales/es/legal.json`.
+
+## Despliegue automático
+
+El repositorio está conectado a Cloudflare Workers Builds: cada push a `main`
+ejecuta `npm run build` y `npx wrangler deploy` (worker `sano-landing`).

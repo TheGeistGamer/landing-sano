@@ -46,7 +46,7 @@ const { links } = Astro.props;
       button.querySelector('.menu-open')?.classList.toggle('hidden', open);
       button.querySelector('.menu-close')?.classList.toggle('hidden', !open);
     };
-    button.addEventListener('click', () => setOpen(panel.hidden));
+    button.addEventListener('click', () => setOpen(panel.hidden === true));
     panel.addEventListener('click', (e) => {
       if ((e.target as HTMLElement).closest('a')) setOpen(false);
     });

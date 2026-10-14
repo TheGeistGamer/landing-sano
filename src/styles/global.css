@@ -140,7 +140,8 @@
   }
   @media (max-width: 900px) { .bigphone { width: 88%; top: -70px; } }
   @media (max-width: 639px) {
-    .bigphone { width: 92%; height: 190px; top: -50px; padding: 8px; border-radius: 26px; transform: translateX(-50%) perspective(1000px) rotateX(40deg) rotateZ(-7deg); }
+    /* En móvil el teléfono va en el flujo, arriba del título, sin encimarse. */
+    .bigphone { position: relative; left: auto; top: auto; width: 100%; height: 190px; margin: -70px 0 28px; padding: 8px; border-radius: 26px; transform: perspective(1000px) rotateX(32deg) rotateZ(-5deg); }
     .bigphone .phone-screen { gap: 6px; padding: 10px; border-radius: 20px; }
     .bigphone .chip { padding: 6px 7px; font-size: 8.5px; line-height: 1.2; border-radius: 10px; }
     .bigphone .chip b { font-size: 15px; }
